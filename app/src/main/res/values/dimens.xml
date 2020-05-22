@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    两个有层级关系的top-->
+    <dimen name="margin_top_normal">4dp</dimen>
+<!--    两个没有层级关系的top-->
+    <dimen name="margin_top_normal_other">4dp</dimen>
+    <dimen name="margin_aline_left_and_right">12dp</dimen>
+
+    <dimen name="text_size_normal">16sp</dimen>
+</resources>

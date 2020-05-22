@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Maths</string>
+    <string name="welcome_text">Hi,</string>
+    <string name="login">login</string>
+    <string name="feed_back">support</string>
+    <string name="local_record">history</string>
+    <string name="check_upgrade">Check for Updates</string>
+    <string name="addition">addition</string>
+    <string name="subtraction">subtraction</string>
+    <string name="multiplication">multiplication</string>
+    <string name="division">division</string>
 </resources>

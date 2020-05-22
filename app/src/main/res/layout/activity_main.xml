@@ -1,18 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".home.view.activity.MainActivity">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_more_ffffff_24"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/color_white"
+        />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dl_main"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_main_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                android:id="@+id/item_addition"
+                android:layout_marginTop="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                layout="@layout/item_maths_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/item_subtraction"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+            <include
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/item_addition"
+                android:id="@+id/item_subtraction"
+                android:layout_marginTop="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                layout="@layout/item_maths_content"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <include
+                android:layout_marginTop="48dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/item_division"
+                android:id="@+id/item_multiplication"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                layout="@layout/item_maths_content"
+                app:layout_constraintTop_toBottomOf="@id/item_addition"
+                />
+            <include
+                android:layout_marginTop="48dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/item_multiplication"
+                android:id="@+id/item_division"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                layout="@layout/item_maths_content"
+                app:layout_constraintTop_toBottomOf="@id/item_addition"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <FrameLayout
+            android:id="@+id/fl_user_content_root"
+            android:layout_gravity="left"
+            android:layout_width="240dp"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

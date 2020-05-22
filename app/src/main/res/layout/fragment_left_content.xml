@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:layout_width="240dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tv_head_bg"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/shape_gradient_color_primary_transparent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/welcome_text"
+        android:textColor="@color/color_text_normal"
+        android:textSize="26sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_normal_other"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome_text"
+        tools:text="Chris Ban" />
+    <!--    登陆-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:elevation="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_head_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_gradient_color_primary_transparent"
+            android:text="@string/login"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_normal"
+            app:layout_constraintBottom_toBottomOf="@id/tv_head_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.cardview.widget.CardView>
+    <!--    -->
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_black_grey"
+        app:layout_constraintTop_toBottomOf="@id/tv_head_bg" />
+    <!--    意见反馈-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_feed_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_normal"
+        android:drawableEnd="@drawable/ic_feed_back_8a8a8a_24"
+        android:drawablePadding="16dp"
+        android:paddingEnd="20dp"
+        android:text="@string/feed_back"
+        android:textColor="@color/color_text_normal"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_line"
+        tools:ignore="RtlSymmetry" />
+
+    <View
+        android:id="@+id/view_feed_back_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_black_grey"
+        app:layout_constraintTop_toBottomOf="@id/tv_feed_back" />
+    <!--    本地记录-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_local_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_normal"
+        android:drawableEnd="@drawable/ic_history_8a8a8a_24"
+        android:drawablePadding="16dp"
+        android:paddingEnd="20dp"
+        android:text="@string/local_record"
+        android:textColor="@color/color_text_normal"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_feed_back_line"
+        tools:ignore="RtlSymmetry" />
+
+    <View
+        android:id="@+id/view_local_record_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_black_grey"
+        app:layout_constraintTop_toBottomOf="@id/tv_local_record" />
+    <!--    检查更新-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_check_upgrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_normal"
+        android:drawableEnd="@drawable/ic_check_for_updates_8a8a8a_24"
+        android:drawablePadding="16dp"
+        android:paddingEnd="20dp"
+        android:text="@string/check_upgrade"
+        android:textColor="@color/color_text_normal"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_local_record_line"
+        tools:ignore="RtlSymmetry" />
+
+    <View
+        android:id="@+id/view_upgrade_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_black_grey"
+        app:layout_constraintTop_toBottomOf="@id/tv_check_upgrade" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_top_normal_other"
+        android:textColor="@color/color_text_normal"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="RtlSymmetry"
+        tools:text="v1.0.0" />
+    <!--    版本号-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
